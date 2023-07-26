@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="style.css">
+    <title>Code Review Checklist</title>    
+</head>
+<body>
+    <header class="header">
+      <img class="logo-bg" src="./logo-head.svg" width="371" height="80">
+    </header>
+    <div class="container">
+    <h1>Code Review Checklist</h1>
+
+    <h2>For Developers:</h2>
+    <h5>Please, revise the code again</h5>
+    <div class="checkbox-group">
+    <form id="formDev">
+        <label>
+            <input type="checkbox"  required> Functionality:
+            <ul>
+                <li>Does the code accomplish the intended functionality and meet the requirements?</li>
+                <li>Are there any missing edge cases or scenarios that need to be handled?</li>
+            </ul>
+        </label>
+        <label>
+            <input type="checkbox"  required> Code Clarity and Readability:
+            <ul>
+                <li>Is the code easy to read and understand?</li>
+                <li>Are variable names meaningful and descriptive?</li>
+                <li>Are there comments explaining complex logic or non-obvious decisions?</li>
+            </ul>
+        </label>
+        <label>
+            <input type="checkbox" required> Coding Standards and Best Practices:
+            <ul>
+                <li>Does the code follow the team's coding guidelines and industry best practices?</li>
+                <li>Is the code consistent with the established coding style of the project?</li>
+            </ul>
+        </label>
+        <label>
+            <input type="checkbox" required> Performance:
+            <ul>
+                <li>Is the code optimized and efficient?</li>
+                <li>Are there any potential bottlenecks or performance issues that need to be addressed?</li>
+            </ul>
+        </label>
+        <label>
+            <input type="checkbox" required> Error Handling:
+            <ul>
+                <li>Are all potential error scenarios handled appropriately?</li>
+            </ul>
+        </label>
+        <label>
+            <input type="checkbox" required> Testing:
+            <ul>
+                <li>Has the developer provided unit tests to cover the new code?</li>
+            </ul>
+        </label>
+        <label>
+            <input type="checkbox" required> Security:
+            <ul>
+                <li>Are there any security vulnerabilities present in the code?</li>
+                <li>Are inputs properly validated and sanitized?</li>
+            </ul>
+        </label>
+        <label>
+            <input type="checkbox" required> Documentation:
+            <ul>
+                <li>Is there sufficient documentation explaining the purpose of the code and how it works?</li>
+            </ul>
+        </label>
+        <!-- Add more checklist items here -->
+  
+    <button type="submit">Save</button>
+    </form>
+</div>
+    <h2>For Reviewers:</h2>
+    <div class="checkbox-group">
+    <form id="formRev">    
+        <label>
+            <input type="checkbox" required> Scope and Requirements:
+            <ul>
+                <li>Understand the purpose and requirements of the code being reviewed.</li>
+            </ul>
+        </label>
+        <label>
+            <input type="checkbox" required> Functionality:
+            <ul>
+                <li>Verify that the code meets the intended functionality and requirements.</li>
+            </ul>
+        </label>
+        <label>
+            <input type="checkbox" required> Code Clarity and Readability:
+            <ul>
+                <li>Ensure the code is clear, readable, and easy to understand.</li>
+            </ul>
+        </label>
+        <label>
+            <input type="checkbox" required> Coding Standards and Best Practices:
+            <ul>
+                <li>Check if the code follows the team's coding guidelines and best practices.</li>
+            </ul>
+        </label>
+        <label>
+            <input type="checkbox" required> Performance:
+            <ul>
+                <li>Assess the code for potential performance bottlenecks or inefficiencies.</li>
+            </ul>
+        </label>
+        <label>
+            <input type="checkbox" required> Error Handling:
+            <ul>
+                <li>Verify that the code handles errors appropriately and gracefully.</li>
+            </ul>
+        </label>
+        <label>
+            <input type="checkbox" required> Testing
+            <ul>
+                <li>Evaluate the quality and coverage of the provided unit tests.</li>
+            </ul>
+        </label>
+        <label>
+            <input type="checkbox" required> Security
+            <ul>
+                <li>Identify and address any security vulnerabilities in the code.</li>
+            </ul>
+        </label>
+        <label>
+            <input type="checkbox" required> Documentation
+            <ul>
+                <li>Ensure that the code is well-documented, including comments and explanations where necessary.</li>
+            </ul>
+        </label>
+        <label>
+            <input type="checkbox" required> Communication
+            <ul>
+                <li>Provide clear and constructive feedback to the developer, be polite.</li>
+            </ul>
+        </label>
+        <button type="submit">Save</button>
+
+        <!-- Add more checklist items here -->
+  
+    </form>
+    </div>
+    <h4>Remember! </h4>
+    <p>Code reviews are not about nitpicking or finding fault but rather improving the overall quality of the codebase and fostering a collaborative environment. 
+        <br/>Both developers and reviewers should engage in constructive discussions and be open to feedback.
+    </p>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
