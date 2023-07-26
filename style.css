@@ -46,3 +46,16 @@ input {
     cursor: pointer;
 
 }
+
+.formRev-btn,
+.formDev-btn {
+    width: 100px;
+    height: 30px;
+    border-radius: 7px;
+    background-color: #0075ff;
+    color: white;  
+    border: 1px solid  #0075ff;
+    cursor: pointer;
+}
+
+ 
