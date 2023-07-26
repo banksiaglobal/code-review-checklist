@@ -1,57 +1,53 @@
-// Get references to all the forms and submit buttons
-const formDev = document.getElementById('formDev');
-const submitButton1 = formDev.querySelector('button[type="submit"]');
-
-/// Function to display form data in console
-function displayFormData(event) {
-    event.preventDefault(); // Prevent form submission and page reload
-
-    if (formDev.checkValidity()) {
-        const formData = new FormData(event.target);
-        const formDataObject = Object.fromEntries(formData.entries());
-        alert('Nice job! Thanks a lot! Create the pull request, please');
-
-        // Add any additional logic or actions here
-        // For example, you can use JavaScript to send the form data to the server via AJAX without reloading the page.
-    } else {
-        // Show custom validation message if form is invalid
-        formDev.reportValidity();
-    }
+const messages = {
+    dev: 'Nice job! Thanks a lot! Create the pull request, please',
+    rev: 'Nice job! Thanks a lot! The review is completed!'
 }
-
-// Add submit event listener to the form
-formDev.addEventListener('submit', displayFormData);
-
-// Enable or disable submit button based on form validity
-formDev.addEventListener('change', function () {
-    submitButton1.disabled = !formDev.checkValidity();
-});
 
 // Get references to all the forms and submit buttons
 const formRev = document.getElementById('formRev');
-const submitButton2 = formRev.querySelector('button[type="submit"]');
+const submitButtonRev = formRev.querySelector('.formRev-btn');
 
-/// Function to display form data in console
-function displayFormData(event) {
+// Function to handle reviewer's form data
+function displayRevFormData(event) {
     event.preventDefault(); // Prevent form submission and page reload
 
     if (formRev.checkValidity()) {
         const formData = new FormData(event.target);
-        const formDataObject = Object.fromEntries(formData.entries());
-        alert('Nice job! Thanks a lot! The review is completed!');
-
-        // Add any additional logic or actions here
-        // For example, you can use JavaScript to send the form data to the server via AJAX without reloading the page.
+        alert(messages.rev);
     } else {
         // Show custom validation message if form is invalid
-        formRev.reportValidity();
+        alert('Please finish review');
     }
 }
 
-// Add submit event listener to the form
-formRev.addEventListener('submit', displayFormData);
+// Add submit event listener to the reviewer's form
+formRev.addEventListener('submit', displayRevFormData);
 
 // Enable or disable submit button based on form validity
 formRev.addEventListener('change', function () {
-    submitButton2.disabled = !formRev.checkValidity();
+    submitButtonRev.disabled = !formRev.checkValidity();
+});
+
+const formDev = document.getElementById('formDev');
+const submitButtonDev = formDev.querySelector('.formDev-btn');
+
+// Function to handle developer's form data
+function displayDevFormData(event) {
+    event.preventDefault(); // Prevent form submission and page reload
+
+    if (formDev.checkValidity()) {
+        const formData = new FormData(event.target);
+        alert(messages.dev);
+    } else {
+        // Show custom validation message if form is invalid
+        alert('Please finish review');
+    }
+}
+
+// Add submit event listener to the developer's form
+formDev.addEventListener('submit', displayDevFormData);
+
+// Enable or disable submit button based on form validity
+formDev.addEventListener('change', function () {
+    submitButtonDev.disabled = !formDev.checkValidity();
 });
