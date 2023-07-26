@@ -37,3 +37,12 @@ button[disabled] {
     display: block;
     margin: 0 auto;
 }
+
+li {
+    color: #a5a4a4;
+}
+
+input {
+    cursor: pointer;
+
+}
