@@ -38,8 +38,17 @@ button[disabled] {
     margin: 0 auto;
 }
 
+ul {
+    margin: 0px;
+}
+
 li {
+    font-size: 12px;
     color: #a5a4a4;
+}
+
+label {
+    margin-bottom: 5px;
 }
 
 input {

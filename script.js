@@ -14,6 +14,7 @@ function displayRevFormData(event) {
     if (formRev.checkValidity()) {
         const formData = new FormData(event.target);
         alert(messages.rev);
+        formRev.reset();
     } else {
         // Show custom validation message if form is invalid
         alert('Please finish review');
@@ -38,6 +39,7 @@ function displayDevFormData(event) {
     if (formDev.checkValidity()) {
         const formData = new FormData(event.target);
         alert(messages.dev);
+        formDev.reset()
     } else {
         // Show custom validation message if form is invalid
         alert('Please finish review');
